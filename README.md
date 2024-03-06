@@ -42,3 +42,16 @@ In the Lexical Analyzer, the goal is given certain test case files (in the TestC
 - While,
   - `‘Hello to CS 280.”` or `"Hello to CS 280.’"` are not.
 
+### Chart of tokens to be recognized
+
+| Reserved Word | Token   |   | Operator Symbol | Token | Description                                 |   | Character | Token | Description               |
+|---------------|---------|---|------------------|-------|---------------------------------------------|---|-----------|-------|---------------------------|
+| program       | PROGRAM |   | +                | PLUS  | Arithmetic addition or concatenation       |   | ,         | COMMA | Comma                     |
+| end           | END     |   | -                | MINUS | Arithmetic subtraction                      |   | (         | LPAREN | Left Parenthesis          |
+| else          | ELSE    |   | *                | MULT  | Multiplication                              |   | )         | RPAREN | Right parenthesis         |
+| if            | IF      |   | /                | DIV   | Division                                    |   | ::        | DCOLON | Double Colons             |
+| integer       | INTEGER |   | **               | POW   | Exponentiation                              |   | .         | DOT   | Dot                       |
+| real          | REAL    |   | =                | ASSOP | Assignment operator                         |   | *         | DEF   | Default mark              |
+| character     | CHARACTER | | ==               | EQ    | Equality                                    |                                               |
+| print         | PRINT   |   | <                | LTHAN | Less than operator                          |                                               |
+| len           | LEN     |   | >                | GTHAN | Greater than operator                       |                                               |
