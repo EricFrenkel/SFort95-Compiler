@@ -19,3 +19,26 @@ This repository consist of a three part project in building a simple compiler fo
 16. SFactor ::= [+ | -] Factor
 17. Var = IDENT
 18. Factor ::= IDENT | ICONST | RCONST | SCONST | (Expr)
+
+## PA1: Lexical Analyzer
+In the Lexical Analyzer, the goal is given certain test case files (in the TestCases directory), convert the given file into its appropriate tokens based on the regular expressions shown below.
+
+### Identifiers (IDENT)
+- **IDENT:** `Letter (Letter | Digit | _) *`
+- **Letter:** `[a-z A-Z]`
+- **Digit:** `[0-9]`
+- *Note that all identifiers are case-sensitive.*
+
+### Integer Constants (ICONST)
+- **ICONST:** `[0-9]+`
+
+### Real Constants (RCONST)
+- **RCONST:** `([0-9]*)\.([0-9]+)`
+- *For example, real number constants such as 12.0, 0.2, and .5 are accepted as real constants, but 2. is not. Note that “2.” is recognized as an integer followed by a DOT.*
+
+### String Constants (SCONST)
+- A string literal is referred to by the SCONST terminal, which is defined as a sequence of characters delimited by either single or double quotes, that should all appear on the same line. For example,
+  - `‘Hello to CS 280.’` or `"Hello to CS 280."` are valid string literals.
+- While,
+  - `‘Hello to CS 280.”` or `"Hello to CS 280.’"` are not.
+
